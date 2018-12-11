@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SES_MAGDataSet" targetNamespace="http://tempuri.org/SES_MAGDataSet.xsd" xmlns:mstns="http://tempuri.org/SES_MAGDataSet.xsd" xmlns="http://tempuri.org/SES_MAGDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SES_MAGConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SES_MAGConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Ваучеры.Properties.Settings.GlobalReference.Default.SES_MAGConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="в_Ваучеры_ШКTableAdapter" GeneratorDataComponentClassName="в_Ваучеры_ШКTableAdapter" Name="в_Ваучеры_ШК" UserDataComponentName="в_Ваучеры_ШКTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SES_MAGConnectionString (Settings)" DbObjectName="SES_MAG.dbo.в_Ваучеры_ШК" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT А, П, Статус, Номер, Номинал, [дата Актив], [дата Созд], [дата Окончания], [дата Оплаты], Период, [_Кат], Категория, [_Ваучер ] FROM dbo.в_Ваучеры_ШК</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="А" DataSetColumn="А" />
+              <Mapping SourceColumn="П" DataSetColumn="П" />
+              <Mapping SourceColumn="Статус" DataSetColumn="Статус" />
+              <Mapping SourceColumn="Номер" DataSetColumn="Номер" />
+              <Mapping SourceColumn="Номинал" DataSetColumn="Номинал" />
+              <Mapping SourceColumn="дата Актив" DataSetColumn="дата Актив" />
+              <Mapping SourceColumn="дата Созд" DataSetColumn="дата Созд" />
+              <Mapping SourceColumn="дата Окончания" DataSetColumn="дата Окончания" />
+              <Mapping SourceColumn="дата Оплаты" DataSetColumn="дата Оплаты" />
+              <Mapping SourceColumn="Период" DataSetColumn="Период" />
+              <Mapping SourceColumn="_Кат" DataSetColumn="_Кат" />
+              <Mapping SourceColumn="Категория" DataSetColumn="Категория" />
+              <Mapping SourceColumn="_Ваучер " DataSetColumn="_Ваучер " />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="в_Ваучеры_Категории_ШКTableAdapter" GeneratorDataComponentClassName="в_Ваучеры_Категории_ШКTableAdapter" Name="в_Ваучеры_Категории_ШК" UserDataComponentName="в_Ваучеры_Категории_ШКTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SES_MAGConnectionString (Settings)" DbObjectName="SES_MAG.dbo.в_Ваучеры_Категории_ШК" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [_Кат], Категория, [дата Созд], Записей FROM dbo.в_Ваучеры_Категории_ШК</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="_Кат" DataSetColumn="_Кат" />
+              <Mapping SourceColumn="Категория" DataSetColumn="Категория" />
+              <Mapping SourceColumn="дата Созд" DataSetColumn="дата Созд" />
+              <Mapping SourceColumn="Записей" DataSetColumn="Записей" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SES_MAGConnectionString (Settings)" DbObjectName="SES_MAG.dbo.в_Ваучеры_Категории_ШК" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [_Кат], Категория, [дата Созд], Записей FROM dbo.в_Ваучеры_Категории_ШК</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SES_MAGDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SES_MAGDataSet" msprop:Generator_UserDSName="SES_MAGDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="в_Ваучеры_ШК" msprop:Generator_TableClassName="в_Ваучеры_ШКDataTable" msprop:Generator_TableVarName="tableв_Ваучеры_ШК" msprop:Generator_RowChangedName="в_Ваучеры_ШКRowChanged" msprop:Generator_TablePropName="в_Ваучеры_ШК" msprop:Generator_RowDeletingName="в_Ваучеры_ШКRowDeleting" msprop:Generator_RowChangingName="в_Ваучеры_ШКRowChanging" msprop:Generator_RowEvHandlerName="в_Ваучеры_ШКRowChangeEventHandler" msprop:Generator_RowDeletedName="в_Ваучеры_ШКRowDeleted" msprop:Generator_RowClassName="в_Ваучеры_ШКRow" msprop:Generator_UserTableName="в_Ваучеры_ШК" msprop:Generator_RowEvArgName="в_Ваучеры_ШКRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="А" msprop:Generator_ColumnVarNameInTable="columnА" msprop:Generator_ColumnPropNameInRow="А" msprop:Generator_ColumnPropNameInTable="АColumn" msprop:Generator_UserColumnName="А" type="xs:int" minOccurs="0" />
+              <xs:element name="П" msprop:Generator_ColumnVarNameInTable="columnП" msprop:Generator_ColumnPropNameInRow="П" msprop:Generator_ColumnPropNameInTable="ПColumn" msprop:Generator_UserColumnName="П" type="xs:int" minOccurs="0" />
+              <xs:element name="Статус" msprop:Generator_ColumnVarNameInTable="columnСтатус" msprop:Generator_ColumnPropNameInRow="Статус" msprop:Generator_ColumnPropNameInTable="СтатусColumn" msprop:Generator_UserColumnName="Статус" type="xs:int" minOccurs="0" />
+              <xs:element name="Номер" msprop:Generator_ColumnVarNameInTable="columnНомер" msprop:Generator_ColumnPropNameInRow="Номер" msprop:Generator_ColumnPropNameInTable="НомерColumn" msprop:Generator_UserColumnName="Номер">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Номинал" msprop:Generator_ColumnVarNameInTable="columnНоминал" msprop:Generator_ColumnPropNameInRow="Номинал" msprop:Generator_ColumnPropNameInTable="НоминалColumn" msprop:Generator_UserColumnName="Номинал" type="xs:double" minOccurs="0" />
+              <xs:element name="дата_x0020_Актив" msprop:Generator_ColumnVarNameInTable="columnдата_Актив" msprop:Generator_ColumnPropNameInRow="дата_Актив" msprop:Generator_ColumnPropNameInTable="дата_АктивColumn" msprop:Generator_UserColumnName="дата Актив" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="дата_x0020_Созд" msprop:Generator_ColumnVarNameInTable="columnдата_Созд" msprop:Generator_ColumnPropNameInRow="дата_Созд" msprop:Generator_ColumnPropNameInTable="дата_СоздColumn" msprop:Generator_UserColumnName="дата Созд" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="дата_x0020_Окончания" msprop:Generator_ColumnVarNameInTable="columnдата_Окончания" msprop:Generator_ColumnPropNameInRow="дата_Окончания" msprop:Generator_ColumnPropNameInTable="дата_ОкончанияColumn" msprop:Generator_UserColumnName="дата Окончания" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="дата_x0020_Оплаты" msprop:Generator_ColumnVarNameInTable="columnдата_Оплаты" msprop:Generator_ColumnPropNameInRow="дата_Оплаты" msprop:Generator_ColumnPropNameInTable="дата_ОплатыColumn" msprop:Generator_UserColumnName="дата Оплаты" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Период" msprop:Generator_ColumnVarNameInTable="columnПериод" msprop:Generator_ColumnPropNameInRow="Период" msprop:Generator_ColumnPropNameInTable="ПериодColumn" msprop:Generator_UserColumnName="Период" type="xs:int" minOccurs="0" />
+              <xs:element name="_Кат" msprop:Generator_ColumnVarNameInTable="column_Кат" msprop:Generator_ColumnPropNameInRow="_Кат" msprop:Generator_ColumnPropNameInTable="_КатColumn" msprop:Generator_UserColumnName="_Кат" type="xs:int" />
+              <xs:element name="Категория" msprop:Generator_ColumnVarNameInTable="columnКатегория" msprop:Generator_ColumnPropNameInRow="Категория" msprop:Generator_ColumnPropNameInTable="КатегорияColumn" msprop:Generator_UserColumnName="Категория" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="_Ваучер_x0020_" msprop:Generator_ColumnVarNameInTable="column_Ваучер_" msprop:Generator_ColumnPropNameInRow="_Ваучер_" msprop:Generator_ColumnPropNameInTable="_Ваучер_Column" msprop:Generator_UserColumnName="_Ваучер " type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="в_Ваучеры_Категории_ШК" msprop:Generator_TableClassName="в_Ваучеры_Категории_ШКDataTable" msprop:Generator_TableVarName="tableв_Ваучеры_Категории_ШК" msprop:Generator_TablePropName="в_Ваучеры_Категории_ШК" msprop:Generator_RowDeletingName="в_Ваучеры_Категории_ШКRowDeleting" msprop:Generator_RowChangingName="в_Ваучеры_Категории_ШКRowChanging" msprop:Generator_RowEvHandlerName="в_Ваучеры_Категории_ШКRowChangeEventHandler" msprop:Generator_RowDeletedName="в_Ваучеры_Категории_ШКRowDeleted" msprop:Generator_UserTableName="в_Ваучеры_Категории_ШК" msprop:Generator_RowChangedName="в_Ваучеры_Категории_ШКRowChanged" msprop:Generator_RowEvArgName="в_Ваучеры_Категории_ШКRowChangeEvent" msprop:Generator_RowClassName="в_Ваучеры_Категории_ШКRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="_Кат" msprop:Generator_ColumnVarNameInTable="column_Кат" msprop:Generator_ColumnPropNameInRow="_Кат" msprop:Generator_ColumnPropNameInTable="_КатColumn" msprop:Generator_UserColumnName="_Кат" type="xs:int" />
+              <xs:element name="Категория" msprop:Generator_ColumnVarNameInTable="columnКатегория" msprop:Generator_ColumnPropNameInRow="Категория" msprop:Generator_ColumnPropNameInTable="КатегорияColumn" msprop:Generator_UserColumnName="Категория" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="дата_x0020_Созд" msprop:Generator_ColumnVarNameInTable="columnдата_Созд" msprop:Generator_ColumnPropNameInRow="дата_Созд" msprop:Generator_ColumnPropNameInTable="дата_СоздColumn" msprop:Generator_UserColumnName="дата Созд" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Записей" msprop:Generator_ColumnVarNameInTable="columnЗаписей" msprop:Generator_ColumnPropNameInRow="Записей" msprop:Generator_ColumnPropNameInTable="ЗаписейColumn" msprop:Generator_UserColumnName="Записей" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:в_Ваучеры_ШК" />
+      <xs:field xpath="mstns:_Ваучер_x0020_" />
+    </xs:unique>
+    <xs:unique name="в_Ваучеры_Категории_ШК_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:в_Ваучеры_Категории_ШК" />
+      <xs:field xpath="mstns:_Кат" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
