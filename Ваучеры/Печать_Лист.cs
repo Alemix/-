@@ -37,5 +37,13 @@ namespace Ваучеры
             c1Report1.Layout.Orientation = C1.C1Report.OrientationEnum.Portrait;
             c1PrintPreviewControl1.PreviewPane.ZoomFactor = 1;    
         }
+
+        private void c1Button_Печать_PDF_Click(object sender, EventArgs e)
+        {
+          string отчет_файл = @"a:\Временные файлы\я_Отчеты_Категория.pdf";
+          c1Report1.RenderToFile(отчет_файл, C1.C1Report.FileFormatEnum.PDFEmbedFonts);
+
+            System.Diagnostics.Process.Start(отчет_файл);
+        }
     }
 }

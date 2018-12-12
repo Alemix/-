@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="c1.c1report.4, Version=4.6.20142.54737, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL" />
     <Reference Include="c1.win.c1command.4, Version=4.0.20142.19716, Culture=neutral, PublicKeyToken=e808566f358766d8, processorArchitecture=MSIL" />
+    <Reference Include="c1.win.c1input.4, Version=4.0.20142.33421, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
     <Reference Include="c1.win.c1report.4, Version=4.6.20142.54737, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL" />
     <Reference Include="c1.win.c1ribbon.4, Version=4.0.20142.597, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="c1.win.c1splitcontainer.4, Version=4.0.20142.56, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />

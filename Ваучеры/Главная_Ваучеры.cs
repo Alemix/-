@@ -12,6 +12,8 @@ namespace Ваучеры
 {
     public partial class Главная_Ваучеры : Form
     {
+        public int _Кат = 0;
+
         public Главная_Ваучеры()
         {
             InitializeComponent();
@@ -19,25 +21,34 @@ namespace Ваучеры
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sES_MAGDataSet.в_Ваучеры_Категории_ШК". При необходимости она может быть перемещена или удалена.
+           
             this.в_Ваучеры_Категории_ШКTableAdapter.Fill(this.sES_MAGDataSet.в_Ваучеры_Категории_ШК);
-            //// TODO: данная строка кода позволяет загрузить данные в таблицу "sES_MAGDataSet1.в_Ваучеры_Категории_ШК". При необходимости она может быть перемещена или удалена.
-            //this.в_Ваучеры_Категории_ШКTableAdapter.Fill(this.sES_MAGDataSet.в_Ваучеры_Категории_ШК);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "sES_MAGDataSet.в_Ваучеры_ШК". При необходимости она может быть перемещена или удалена.
             this.в_Ваучеры_ШКTableAdapter.Fill(this.sES_MAGDataSet.в_Ваучеры_ШК);
-
+            c1DockingTab1.SelectedIndex = 0;
+        }
+        private void заполнить_Ваучеры_по_Категории()
+        {  
+            
+            string _Кат_ = c1TrueDBGrid_Категории.Columns["_Кат"].Value.ToString();
+            if (_Кат_.Length != 0)
+            {
+                _Кат = Convert.ToInt32(_Кат_);
+                //  this.вэ_мен_ден_блю_выхTableAdapter.FillBy(this.edaDataSet.вэ_мен_ден_блю_вых, кто_код, мдб_код, меню_код, еда_код);
+                this.в_Ваучеры_ШКTableAdapter.FillBy_Кат(this.sES_MAGDataSet.в_Ваучеры_ШК, _Кат);
+                c1SplitterPanel_Ваучеры.Text = "_Кат = " +
+                    c1TrueDBGrid_Категории.Columns["_Кат"].Value.ToString() + "  Категория = " +
+                    c1TrueDBGrid_Категории.Columns["Категория"].Value.ToString() + "     дата Созд = " +
+                    c1TrueDBGrid_Категории.Columns["дата Созд"].Value.ToString() + "     Записей = " +
+                    c1TrueDBGrid_Категории.Columns["Записей"].Value.ToString();
+            }
         }
 
         private void ribbonButton_Печать_Лист_Click(object sender, EventArgs e)
         {
-            //глав_HotelDataSetTableAdapters.пров_все_QueriesTableAdapter пв;
-            //пв = new Hotel_2.глав_HotelDataSetTableAdapters.пров_все_QueriesTableAdapter();
-            //пв.Отчеты_Стат_12_вэс_таблица_1(о_дата_с, о_дата_по, о_Орг_Хоз, о_Курс_долл_США);
+            SES_MAGDataSetTableAdapters.QueriesTableAdapter qq;
+            qq = new SES_MAGDataSetTableAdapters.QueriesTableAdapter();
+            qq.Отчеты_ШК_Категория(_Кат);
 
-            //Отчеты.Отчеты_Стат_12_вэс_таблица_1 от12 = new Отчеты.Отчеты_Стат_12_вэс_таблица_1();
-            //от12.Visible = true;
-            //от12.Activate();
-         
            Печать_Лист пл = new Печать_Лист();
             пл.Visible = true;
             пл.Activate();
@@ -47,6 +58,12 @@ namespace Ваучеры
         {
             this.в_Ваучеры_Категории_ШКTableAdapter.Fill(this.sES_MAGDataSet.в_Ваучеры_Категории_ШК);
             this.в_Ваучеры_ШКTableAdapter.Fill(this.sES_MAGDataSet.в_Ваучеры_ШК);
+
         }
+
+        private void c1TrueDBGrid_Категории_DoubleClick(object sender, EventArgs e)
+        {
+            заполнить_Ваучеры_по_Категории();
+         }
     }
 }

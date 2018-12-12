@@ -114,122 +114,6 @@
       </Field>
     </Fields>
   </Report>
-  <!--Report *** dbo.в_Ваучеры_ШК Report 7168 ***-->
-  <Report version="2.6.20122.54513">
-    <Name>dbo.в_Ваучеры_ШК Report 7168</Name>
-    <ReportInfo>
-      <Author>МихновАГ</Author>
-    </ReportInfo>
-    <DataSource>
-      <ConnectionString>Provider=SQLOLEDB.1;Password=mssql;Persist Security Info=True;User ID=sa;Initial Catalog=SES_MAG;Data Source=ServerSet</ConnectionString>
-      <RecordSource>dbo.в_Ваучеры_ШК</RecordSource>
-      <DataProvider>1</DataProvider>
-    </DataSource>
-    <Layout>
-      <Width>11283</Width>
-      <MarginLeft>432</MarginLeft>
-      <MarginTop>432</MarginTop>
-      <MarginRight>432</MarginRight>
-      <MarginBottom>216</MarginBottom>
-      <Orientation>1</Orientation>
-      <ColumnLayout>2</ColumnLayout>
-      <LabelSpacingX>354</LabelSpacingX>
-      <LabelSpacingY>864</LabelSpacingY>
-    </Layout>
-    <Font>
-      <Name>Arial</Name>
-      <Size>9</Size>
-    </Font>
-    <CompatibilityOptions />
-    <Groups />
-    <Sections>
-      <Section>
-        <Name>Detail</Name>
-        <Type>0</Type>
-        <Height>8108</Height>
-        <CanGrow>0</CanGrow>
-      </Section>
-      <Section>
-        <Name>Header</Name>
-        <Type>1</Type>
-        <Visible>0</Visible>
-      </Section>
-      <Section>
-        <Name>Footer</Name>
-        <Type>2</Type>
-        <Visible>0</Visible>
-      </Section>
-      <Section>
-        <Name>PageHeader</Name>
-        <Type>3</Type>
-        <Visible>0</Visible>
-      </Section>
-      <Section>
-        <Name>PageFooter</Name>
-        <Type>4</Type>
-        <Visible>0</Visible>
-      </Section>
-    </Sections>
-    <Fields>
-      <Field>
-        <Name>[дата Окончания]Ctl</Name>
-        <Section>0</Section>
-        <Text>[дата Окончания]</Text>
-        <Calculated>-1</Calculated>
-        <Left>390</Left>
-        <Top>135</Top>
-        <Width>10539</Width>
-        <Height>225</Height>
-        <Align>0</Align>
-        <CanShrink>-1</CanShrink>
-      </Field>
-      <Field>
-        <Name>НоминалCtl</Name>
-        <Section>0</Section>
-        <Text>Номинал</Text>
-        <Calculated>-1</Calculated>
-        <Left>390</Left>
-        <Top>360</Top>
-        <Width>10539</Width>
-        <Height>225</Height>
-        <Align>0</Align>
-        <CanShrink>-1</CanShrink>
-      </Field>
-      <Field>
-        <Name>Номер_OKCtl</Name>
-        <Section>0</Section>
-        <Text>Номер_OK</Text>
-        <Calculated>-1</Calculated>
-        <Left>390</Left>
-        <Top>585</Top>
-        <Width>10539</Width>
-        <Height>225</Height>
-        <Align>0</Align>
-        <CanShrink>-1</CanShrink>
-      </Field>
-      <Field>
-        <Name>НомерCtl</Name>
-        <Section>0</Section>
-        <Text>Номер</Text>
-        <Calculated>-1</Calculated>
-        <Left>390</Left>
-        <Top>810</Top>
-        <Width>10539</Width>
-        <Height>225</Height>
-        <Align>0</Align>
-        <CanShrink>-1</CanShrink>
-      </Field>
-      <Field>
-        <Name>Field1</Name>
-        <Section>0</Section>
-        <Left>30</Left>
-        <Top>45</Top>
-        <Width>10860</Width>
-        <Height>7155</Height>
-        <BorderStyle>1</BorderStyle>
-      </Field>
-    </Fields>
-  </Report>
   <!--Report *** dbo.в_Ваучеры_ШК Report_3 ***-->
   <Report version="2.6.20122.54513">
     <Name>dbo.в_Ваучеры_ШК Report_3</Name>
@@ -389,7 +273,7 @@
     </ReportInfo>
     <DataSource>
       <ConnectionString>Provider=SQLOLEDB.1;Password=mssql;Persist Security Info=True;User ID=sa;Initial Catalog=SES_MAG;Data Source=ServerSet</ConnectionString>
-      <RecordSource>dbo.в_Ваучеры_ШК</RecordSource>
+      <RecordSource>dbo.я_Отчеты_ШК</RecordSource>
       <DataProvider>1</DataProvider>
     </DataSource>
     <Layout>
@@ -398,9 +282,10 @@
       <MarginTop>850</MarginTop>
       <MarginRight>432</MarginRight>
       <MarginBottom>425</MarginBottom>
-      <Orientation>1</Orientation>
+      <Orientation>2</Orientation>
       <Columns>2</Columns>
       <ColumnLayout>2</ColumnLayout>
+      <PaperSize>9</PaperSize>
       <LabelSpacingX>467</LabelSpacingX>
     </Layout>
     <Font>
